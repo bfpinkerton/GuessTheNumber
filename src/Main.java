@@ -9,7 +9,11 @@ public class Main {
     private static void game(){
         System.out.println("Hello! What is your name?");
         Scanner sc = new Scanner(System.in);
-        String name = sc.nextLine();
+        try {
+            String name = sc.nextLine();
+        }catch(Exception e){
+            System.out.println("An error has occured");
+        }
         System.out.println("Well, "+name+", I am thinking of a number between 1 and 20");
         System.out.println("Take a guess.");
 
